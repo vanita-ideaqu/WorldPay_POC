@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paymentService PUBLIC "-//Worldpay//DTD Worldpay PaymentService v1//EN" "http://dtd.worldpay.com/paymentService_v1.dtd">
+<paymentService version="1.4" merchantCode="GIVEPLEASENO3DSGD"> <!--Enter your own merchant code-->
+   <submit>
+      <order orderCode="T0111"> <!--Enter a unique order code each time-->
+         <description>Test Order</description> <!--Enter a description useful to you-->
+         <amount currencyCode="SGD" exponent="2" value="5000" />
+         <paymentDetails>
+            <CARD-SSL>
+               <cardNumber>4444333322221111</cardNumber>
+               <expiryDate>
+                  <date month="01" year="2022" />
+               </expiryDate>
+               <cardHolderName>Abc</cardHolderName>
+			   <cvc>123</cvc>
+               <cardAddress>
+                  <address>
+                     <address1>47A</address1>
+                     <address2>Queensbridge Road</address2>
+                     <address3>Suburbia</address3>
+                     <postalCode>CB94BQ</postalCode>
+                     <city>Cambridge</city>
+                     <state>Cambridgeshire</state>
+                     <countryCode>GB</countryCode>
+                  </address>
+               </cardAddress>
+            </CARD-SSL>
+            <session shopperIPAddress="123.123.123.123" id="0215ui8ib1" />
+         </paymentDetails>
+		  <shopper>
+			  <shopperEmailAddress>jshopper@myprovider.int</shopperEmailAddress>
+			  <authenticatedShopperID>UniqueshopperID</authenticatedShopperID>
+			  <!--Mandatory for shopper tokens, don't send for merchant tokens-->
+			  <browser>
+				  <acceptHeader>text/html,application/xhtml+xml,application/xml ;q=0.9,*/*;q=0.8 </acceptHeader>
+				  <userAgentHeader>Mozilla/5.0 (Windows; U; Windows NT 5.1;en-GB; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5 (.NET CLR 3.5.30729)</userAgentHeader>
+			  </browser>
+		  </shopper>
+		  <createToken tokenScope="shopper">
+			  <tokenEventReference>TOK7854321</tokenEventReference>
+			  <tokenReason>ClothesDepartment</tokenReason>
+		  </createToken>
+         <!--<dynamicMCC>5045</dynamicMCC> --><!--The merchant category code that applies to this transaction--><!--
+         <dynamicInteractionType type="ECOMMERCE" /> --><!--The type of shopper interaction for this transaction--><!--
+         <dynamic3DS overrideAdvice="do3DS" /> --><!--Optional override element to ignore preset dynamic 3DSrules-->
+      </order>
+   </submit>
+</paymentService>

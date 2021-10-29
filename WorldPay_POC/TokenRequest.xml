@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paymentService PUBLIC "-//Worldpay//DTD Worldpay PaymentService v1//EN" "http://dtd.worldpay.com/paymentService_v1.dtd">
+<paymentService version="1.4" merchantCode="GIVEPLEASENO3DSGD"> <!--Enter your own merchant code-->
+   <submit>
+	   <paymentTokenCreate>
+		   <!--used instead of order element-->
+		   <authenticatedShopperID>UniqueshopperID</authenticatedShopperID>
+		   <createToken tokenScope="shopper">
+			   <tokenEventReference>TOK7854321</tokenEventReference>
+			   <tokenReason>ClothesDepartment</tokenReason>
+		   </createToken>
+		   <paymentInstrument>
+			   <cardDetails>
+				   <cardNumber>4444333322221111</cardNumber>
+				   <expiryDate>
+					   <date month="06" year="2022" />
+				   </expiryDate>
+				   <cardHolderName>J. Shopper</cardHolderName>
+				   <cardAddress>
+					   <address>
+						   <address1>47A</address1>
+						   <address2>Queensbridge Road</address2>
+						   <address3>Suburbia</address3>
+						   <postalCode>CB94BQ</postalCode>
+						   <city>Cambridge</city>
+						   <state>Cambridgeshire</state>
+						   <countryCode>GB</countryCode>
+					   </address>
+				   </cardAddress>
+			   </cardDetails>
+		   </paymentInstrument>
+	   </paymentTokenCreate>
+         
+      
+   </submit>
+</paymentService>

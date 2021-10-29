@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paymentService PUBLIC "-//Worldpay//DTD Worldpay PaymentService v1//EN" "http://dtd.worldpay.com/paymentService_v1.dtd">
+<paymentService version="1.4" merchantCode="GIVEPLEASENO3DSGD"> <!--Enter your own merchant code-->
+   <submit>
+	   <paymentTokenCreate>
+		   <!--used instead of order element-->
+		   <authenticatedShopperID>UniqueshopperID</authenticatedShopperID>
+		   <createToken tokenScope="shopper">
+			   <tokenEventReference>TOK7854321</tokenEventReference>
+			   <tokenReason>ClothesDepartment</tokenReason>
+		   </createToken>
+		   <CSE-DATA>
+			   <encryptedData>
+				   eyJhbGciOiJSU0EtT0FFUCIsImNvbS53b3JsZHBheS5hcGlWZXJzaW9uIjoiMS4wIiwiY29tLndvcmxk
+				   cGF5LmNoYW5uZWwiOiJjdXN0b20iLCJjb20ud29ybGRwYXkubGliVmVyc2lvbiI6IjEuMC4wIiwiZW5j
+				   IjoiQTI1NkNCQy1IUzUxMiIsImtpZCI6IjIifQ.WlLLbIdn-_5JXVBzz2tJOK1rofXz41MRAVBiIxwrj
+				   DBZfatQKLq8iYSFBO6lAuLP38vEtazPAO-Z8L7gUNO9KqDMHeUdDNJ7HxOzLYyQdnOzLMZKetfhlrKAT
+				   MMjQk4ZUq8HHdvhx_dWbxugcRfQbCDUPtxFMVuirMpGw6VYESu0ZTlFOKy8YPlf8spafVvgINXVUbPKm
+				   1fxQpSvwrBi_vaMpLbn0GjyDnpv2YkOZgq0Mcd5O1K2ZmEZdx8ZYTUOWnhN7SFzv9BduEndUNhHCoLkh
+				   JRtoVwqYYgrsEXL_j4PsvAZF0_PI_NIOviYRe9RSoYZDkRzKuCWFsxHtSStPQ.y-cOrxjqAJhsa1RYDG
+				   hpag.-PEsJ6a5VwAatWbk7saa8Rty6iGvPiBfP8V9r26eIksir8cb-JHdPjldBGqI6EdGSTNv9K5Pa73
+				   Jk9KRaWs3Co6sOvmSkqJqGOc3oIeaacvWp5m3SEJQZu2ZVx9bjTElG67cOLR5XTaP5AzOg13HptZ-T9J
+				   GT-pe2V-i_m-wJy4.pVKcqWbUQ0IwBo9HF3sXQoLlOauRg3_uGVEBs-cfB34
+			   </encryptedData>
+			   <cardAddress>
+				   <address>
+					   <address1>47A</address1>
+					   <address2>Queensbridge Road</address2>
+					   <address3>Suburbia</address3>
+					   <postalCode>CB94BQ</postalCode>
+					   <city>Cambridge</city>
+					   <state>Cambridgeshire</state>
+					   <countryCode>GB</countryCode>
+				   </address>
+			   </cardAddress>
+		   </CSE-DATA>
+	   </paymentTokenCreate>
+   </submit>
+</paymentService>
